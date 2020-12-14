@@ -1,11 +1,5 @@
-.window {
-    height: 100%;
-    background-color: black;
-    top: 0px;
-    left: 0px;
-    background-image: url("assets/images/background.jpg");
-    background-size: 100% auto;
-    background-repeat: 'no-repeat';
+.bottom-border {
+    border-bottom: 1px solid gray;
 }
 
 .content-container {
@@ -29,4 +23,19 @@
 
 h1, h2, h3 {
     color: white;
+}
+
+.thumbnail {
+    width: 50px;
+    height: auto;
+}
+
+.window {
+    height: 100%;
+    background-color: black;
+    top: 0px;
+    left: 0px;
+    background-image: url("assets/images/background.jpg");
+    background-size: 100% auto;
+    background-repeat: 'no-repeat';
 }

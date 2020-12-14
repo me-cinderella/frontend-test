@@ -14,6 +14,7 @@ class MarvelList extends React.Component {
 
         this.infiniteScroll = this.infiniteScroll.bind(this);
         this.marvelFetch = this.marvelFetch.bind(this);
+        this.dateFormatter = this.dateFormatter.bind(this);
     }
 
     componentDidMount() {
@@ -52,6 +53,20 @@ class MarvelList extends React.Component {
       )
     }
 
+    dateFormatter = (givendate) => {
+      let date = new Date(givendate);
+
+      let day = date.getDate()
+      let month = date.getMonth() + 1
+      let year = date.getFullYear()
+
+      if(month < 10)
+        return `${day}-0${month}-${year}`;
+
+      return `${day}-${month}-${year}`;
+
+    }
+
     render () {
         return (
             <Container>
@@ -60,11 +75,12 @@ class MarvelList extends React.Component {
                   {this.state.items &&
                     this.state.items.map((item) => {
                       return (
-                        <p>
-                          Personaje: {item.name}
-                          <br />
-                          Descripcion: {item.description || 'sin descripcion disponible'}
-                          </p>
+                        <div className="mb-5 bottom-border">
+                          <p>Personaje: {item.name}</p>
+                          <p>Descripcion: {item.description || 'sin descripcion disponible'}</p>
+                          <img className="thumbnail" src={item.thumbnail['path']+'.'+item.thumbnail['extension']} />
+                          <p>Modificado: {this.dateFormatter(item.modified)}</p>
+                        </div>
                       )
                     })
                   }
