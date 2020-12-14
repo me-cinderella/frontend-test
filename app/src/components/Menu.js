@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from 'assets/images/Logo-Marvel.png';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Button, Nav, Navbar, Form, FormControl } from 'react-bootstrap';
 
 
 class Menu extends React.Component {
@@ -36,6 +36,10 @@ class Menu extends React.Component {
                                     <Nav.Link className="navbar-link" href="/ejercicio-2">Ejercicio 2</Nav.Link>
                                 </Nav.Item>
                         </Nav>
+                    <Form inline>
+                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                        <Button variant="outline-success">Search</Button>
+                    </Form>
                     </Navbar.Collapse>
                     </Navbar>
                 </div>
