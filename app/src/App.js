@@ -1,21 +1,33 @@
+import Header from 'components/Header.js';
+import { MarvelList, Ejercicio1, Ejercicio2 } from './views';
+import { Container, Row, Col } from 'react-bootstrap';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="window">
+        <Container>
+          <Header />
+          <Row>
+              <Col className="col-12 pt-3">
+                <Switch>
+                  <Route path="/ejercicio-2">
+                    <Ejercicio2 />
+                  </Route>
+                  <Route path="/ejercicio-1">
+                    <Ejercicio1 />
+                  </Route>
+                  <Route path="/">
+                    <MarvelList />
+                  </Route>
+                </Switch>
+              </Col>
+          </Row>
+        </Container>
+      </div>
+    </Router>
   );
 }
 
