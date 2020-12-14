@@ -30,3 +30,8 @@
 h1, h2, h3 {
     color: white;
 }
+
+.thumbnail {
+    width: 50px;
+    height: auto;
+}
