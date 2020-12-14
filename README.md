@@ -1,3 +1,32 @@
+# Levantar y ejecutar
+
+Para levantar el proyecto se debe tener instalado en el equipo `Docker` y `Docker compose`
+
+instalar docker: https://docs.docker.com/engine/install/ubuntu/
+instalar docker-compose: https://docs.docker.com/compose/install/
+
+En la raiz del proyecto (dentro del directorio frontend-test) se debe ejecutar el comando
+`docker-compose up` y esperar que se construya la imagen y posteriormente se levante el servidor web con la aplicacion
+
+Dicha aplicacion sera levantada de manera local quedando ubicada en la url indicada por el mismo contenedor una vez lista para su uso
+
+Puede quedar en: 
+    * http://localhost:3000/
+    * http://172.17.0.2:3000/
+
+Dentro de la aplicacion existe un menu que permite navegar a las soluciones de los problemas presentados para este test siendo
+
+    - home:
+        - url: "http://localhost:3000/"
+        - Lista de personajes de marvel con "cargar mas" al llegar al final de la vista
+            NOTA: en caso de no cargar automaticamente acercar el cursor al final de la pagina.
+    - ejercicio-1:
+        - url: "http://localhost:3000/ejercicio-1"
+        - Formulario para calculo de numeros primos segun rango dado
+    - ejercicio-2:
+        - url: "http://localhost:3000/ejercicio-2"
+        - Vista con 2 columnas, una para los datos ingresados y otra para la salida esperada (a la derecha)
+
 # Frontend Test
 
 Bienvenid@ a la prueba técnica que hemos diseñado para quienes postulan al cargo de frontend developer en Envíame.
